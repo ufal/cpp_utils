@@ -1,7 +1,3 @@
 .build/
 compile_test
-fileserver
-json_builder_test
-libmicrohttpd_fileserver
-xml_builder_test
 *.exe
