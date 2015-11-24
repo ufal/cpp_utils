@@ -6,5 +6,92 @@ Version 0.9.0-devel
 %!include: readme.t2t
 
 
-= UFAL C++ Utils Classes =
+= UFAL C++ Utils Files =
 
+Most of the following files are used as headers only, with methods defined
+``inline`` where possible.
+
+For more detailed documentation, see the header files.
+
+
+== binary_decoder.h ==
+
+The ``binary_decoder`` class allows deserialization of data encoded using
+``binary_encoder``.  The serialization is performed using a memory dump, so
+only basic value types are supported.
+
+
+== binary_encoder.h ==
+
+The ``binary_encoder`` class allows serialization of data, which can be
+deserialized using ``binary_decoder``.  The serialization is performed using
+a memory dump, so only basic value types are supported.
+
+
+== compressor.h ==
+
+The ``compressor`` class allow uncompressing and compressing content of
+``binary_decoder`` and ``binary_encoder``. LZMA compression is used.
+
+To use ``compressor::load`` method, link the ``compressor_load.cpp`` file.
+To use ``compressor::save`` method, link the ``compressor_save.cpp`` file.
+
+
+== iostreams.h ==
+
+The ``iostreams.h`` file contains methods for various initializations of C++
+iostreams and for loading a whole paragraph from istream.
+
+
+== iostreams_xml.h ==
+
+Using the ``xml_encoded`` class, content of a string_piece can be appended
+to an ostream, while encoding ``<>&`` and optionally ``"`` using XML entities.
+
+
+== new_unique_ptr.h ==
+
+The ``new_unique_ptr`` method creates a new instance of ``unique_ptr<T>``,
+forwarding all its argument to ``T`` constructor.
+
+
+== options.h ==
+
+The ``options`` class allow parsing options. For option can take either
+no value, any value, or a specific set of values.
+
+To use the ``options`` class, link ``options.cpp`` file.
+
+== parse_double.h ==
+
+The ``parse_double`` methods parse a double.
+
+
+== parse_int.h ==
+
+The ``parse_int`` methods parse a int.
+
+
+== process_args.h ==
+
+Using ``process_args`` method, the given ``processor`` is called on all
+specified input and output files.
+
+
+== split.h ==
+
+The ``split`` methods can split ``string`` or ``string_piece`` to a vector
+of tokens delimited by a specified delimiter character.
+
+
+== string_piece.h ==
+
+The ``string_piece`` structure holds a non-owning reference to a string
+of specified length.
+
+
+== threadsafe_stack.h ==
+
+The ``threadsafe_stack`` class implements a simple stack with ``push`` and
+``pop`` methods, which are thread-safe and implemented using lock-free
+operations.
