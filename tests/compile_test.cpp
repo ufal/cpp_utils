@@ -14,6 +14,7 @@
 #include "iostreams_xml.h"
 #include "new_unique_ptr.h"
 #include "options.h"
+#include "parse_double.h"
 #include "parse_int.h"
 #include "process_args.h"
 #include "split.h"
