@@ -81,7 +81,7 @@ int parse_int(string_piece str, const char* value_name) {
   string error;
 
   if (!parse_int(str, value_name, result, error))
-    exit((cerr << error << endl, 1));
+    runtime_failure(error);
 
   return result;
 }
