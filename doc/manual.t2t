@@ -95,3 +95,11 @@ of specified length.
 The ``threadsafe_stack`` class implements a simple stack with ``push`` and
 ``pop`` methods, which are thread-safe and implemented using lock-free
 operations.
+
+
+== url_detector.h ==
+
+The ``url_detector`` class allow recognizing URLs and emails. Either the whole
+given string must match, or only its prefix.
+
+To use the ``url_detector`` class, link ``url_detector.cpp`` file.

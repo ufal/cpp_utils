@@ -45,6 +45,8 @@
     </li>
     <li><a href="#toc15">2.13. threadsafe_stack.h</a>
     </li>
+    <li><a href="#toc16">2.14. url_detector.h</a>
+    </li>
     </ul>
   </li>
   </ol>
@@ -193,6 +195,17 @@ of specified length.
 The <code>threadsafe_stack</code> class implements a simple stack with <code>push</code> and
 <code>pop</code> methods, which are thread-safe and implemented using lock-free
 operations.
+</p>
+
+<a id="toc16" name="toc16"></a>
+<h2>2.14. url_detector.h</h2>
+
+<p>
+The <code>url_detector</code> class allow recognizing URLs and emails. Either the whole
+given string must match, or only its prefix.
+</p>
+<p>
+To use the <code>url_detector</code> class, link <code>url_detector.cpp</code> file.
 </p>
 </div>
 

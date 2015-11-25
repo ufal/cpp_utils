@@ -20,6 +20,7 @@
 #include "split.h"
 #include "string_piece.h"
 #include "threadsafe_stack.h"
+#include "url_detector.h"
 
 using namespace ufal::utils;
 
@@ -99,6 +100,10 @@ void threadsafe_stack_compilation() {
   threadsafe_stack<int> stack;
   stack.push(nullptr);
   stack.pop();
+}
+
+void url_detector_compilation() {
+  url_detector::detect("http://ufal.mff.cuni.cz");
 }
 
 int main(void) {
