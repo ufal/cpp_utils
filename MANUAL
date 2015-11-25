@@ -94,6 +94,13 @@ parse_int.h
 The parse_int methods parse a int.
 
 
+pointer_decoder.h
+-----------------
+
+The pointer_decoder class has the same deserializing functionality as the
+binary_decoder class, but deserializes non-owning data.
+
+
 process_args.h
 --------------
 

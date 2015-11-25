@@ -16,6 +16,7 @@
 #include "options.h"
 #include "parse_double.h"
 #include "parse_int.h"
+#include "pointer_decoder.h"
 #include "process_args.h"
 #include "split.h"
 #include "string_piece.h"
@@ -82,6 +83,18 @@ void parse_double_compilation() {
 
 void parse_int_compilation() {
   parse_int("1", "number");
+}
+
+void pointer_decoder_compilation() {
+  const unsigned char* ptr = nullptr;
+  pointer_decoder dec(ptr);
+  string str;
+
+  dec.next_1B();
+  dec.next_2B();
+  dec.next_4B();
+  dec.next_str(str);
+  dec.next<char>(1);
 }
 
 void process_args_compilation(int argi, int argc, char* argv[]) {

@@ -37,15 +37,17 @@
     </li>
     <li><a href="#toc11">2.9. parse_int.h</a>
     </li>
-    <li><a href="#toc12">2.10. process_args.h</a>
+    <li><a href="#toc12">2.10. pointer_decoder.h</a>
     </li>
-    <li><a href="#toc13">2.11. split.h</a>
+    <li><a href="#toc13">2.11. process_args.h</a>
     </li>
-    <li><a href="#toc14">2.12. string_piece.h</a>
+    <li><a href="#toc14">2.12. split.h</a>
     </li>
-    <li><a href="#toc15">2.13. threadsafe_stack.h</a>
+    <li><a href="#toc15">2.13. string_piece.h</a>
     </li>
-    <li><a href="#toc16">2.14. url_detector.h</a>
+    <li><a href="#toc16">2.14. threadsafe_stack.h</a>
+    </li>
+    <li><a href="#toc17">2.15. url_detector.h</a>
     </li>
     </ul>
   </li>
@@ -165,31 +167,39 @@ The <code>parse_int</code> methods parse a int.
 </p>
 
 <a id="toc12" name="toc12"></a>
-<h2>2.10. process_args.h</h2>
+<h2>2.10. pointer_decoder.h</h2>
+
+<p>
+The <code>pointer_decoder</code> class has the same deserializing functionality
+as the <code>binary_decoder</code> class, but deserializes non-owning data.
+</p>
+
+<a id="toc13" name="toc13"></a>
+<h2>2.11. process_args.h</h2>
 
 <p>
 Using <code>process_args</code> method, the given <code>processor</code> is called on all
 specified input and output files.
 </p>
 
-<a id="toc13" name="toc13"></a>
-<h2>2.11. split.h</h2>
+<a id="toc14" name="toc14"></a>
+<h2>2.12. split.h</h2>
 
 <p>
 The <code>split</code> methods can split <code>string</code> or <code>string_piece</code> to a vector
 of tokens delimited by a specified delimiter character.
 </p>
 
-<a id="toc14" name="toc14"></a>
-<h2>2.12. string_piece.h</h2>
+<a id="toc15" name="toc15"></a>
+<h2>2.13. string_piece.h</h2>
 
 <p>
 The <code>string_piece</code> structure holds a non-owning reference to a string
 of specified length.
 </p>
 
-<a id="toc15" name="toc15"></a>
-<h2>2.13. threadsafe_stack.h</h2>
+<a id="toc16" name="toc16"></a>
+<h2>2.14. threadsafe_stack.h</h2>
 
 <p>
 The <code>threadsafe_stack</code> class implements a simple stack with <code>push</code> and
@@ -197,8 +207,8 @@ The <code>threadsafe_stack</code> class implements a simple stack with <code>pus
 operations.
 </p>
 
-<a id="toc16" name="toc16"></a>
-<h2>2.14. url_detector.h</h2>
+<a id="toc17" name="toc17"></a>
+<h2>2.15. url_detector.h</h2>
 
 <p>
 The <code>url_detector</code> class allow recognizing URLs and emails. Either the whole
