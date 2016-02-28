@@ -1,3 +1,7 @@
+Version 1.0.2-devel
+-------------------
+
+
 Version 1.0.1 [28 Feb 2016]
 ---------------------------
 - Allow compiling compressor_load and compressor_save in
