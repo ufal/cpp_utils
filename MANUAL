@@ -118,8 +118,14 @@ binary_decoder class, but deserializes non-owning data.
 process_args.h
 --------------
 
-Using process_args method, the given processor is called on all specified input
-and output files.
+Using process_args and process_args_with_output_template methods, the given
+processor is called on all specified input and output files. The two methods
+differ in how they derive the name of the output file.
+- process_args: The output file has to be specified after colon, for every
+  input file separately.
+- process_args_with_output_template: The output file name is generated using
+  output template. The output template can contain {}, which is replaced by the
+  base name of the input file (without directories and extension).
 
 
 split.h
