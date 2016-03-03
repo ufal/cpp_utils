@@ -49,6 +49,19 @@ Using the ``xml_encoded`` class, content of a string_piece can be appended
 to an ostream, while encoding ``<>&`` and optionally ``"`` using XML entities.
 
 
+== named_values.h ==
+
+The ``named_values`` class allows parsing of several named values into
+a map. The format of the named values is the following:
+- the values are semicolon separated
+- every value has ``name=value`` format
+- the ``value`` can be encoded using one of the following:
+  - ``file:file_name``: content of the given file name
+  - ``data:length:value``: the value is exactly ``length`` bytes and can include a semicolon
+  - ``value``: semicolon-separated value
+-
+
+
 == new_unique_ptr.h ==
 
 The ``new_unique_ptr`` method creates a new instance of ``unique_ptr<T>``,

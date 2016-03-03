@@ -12,6 +12,7 @@
 #include "compressor.h"
 #include "iostreams.h"
 #include "iostreams_xml.h"
+#include "named_values.h"
 #include "new_unique_ptr.h"
 #include "options.h"
 #include "parse_double.h"

@@ -29,25 +29,27 @@
     </li>
     <li><a href="#toc7">2.5. iostreams_xml.h</a>
     </li>
-    <li><a href="#toc8">2.6. new_unique_ptr.h</a>
+    <li><a href="#toc8">2.6. named_values.h</a>
     </li>
-    <li><a href="#toc9">2.7. options.h</a>
+    <li><a href="#toc9">2.7. new_unique_ptr.h</a>
     </li>
-    <li><a href="#toc10">2.8. parse_double.h</a>
+    <li><a href="#toc10">2.8. options.h</a>
     </li>
-    <li><a href="#toc11">2.9. parse_int.h</a>
+    <li><a href="#toc11">2.9. parse_double.h</a>
     </li>
-    <li><a href="#toc12">2.10. pointer_decoder.h</a>
+    <li><a href="#toc12">2.10. parse_int.h</a>
     </li>
-    <li><a href="#toc13">2.11. process_args.h</a>
+    <li><a href="#toc13">2.11. pointer_decoder.h</a>
     </li>
-    <li><a href="#toc14">2.12. split.h</a>
+    <li><a href="#toc14">2.12. process_args.h</a>
     </li>
-    <li><a href="#toc15">2.13. string_piece.h</a>
+    <li><a href="#toc15">2.13. split.h</a>
     </li>
-    <li><a href="#toc16">2.14. threadsafe_stack.h</a>
+    <li><a href="#toc16">2.14. string_piece.h</a>
     </li>
-    <li><a href="#toc17">2.15. url_detector.h</a>
+    <li><a href="#toc17">2.15. threadsafe_stack.h</a>
+    </li>
+    <li><a href="#toc18">2.16. url_detector.h</a>
     </li>
     </ul>
   </li>
@@ -134,15 +136,40 @@ to an ostream, while encoding <code>&lt;&gt;&amp;</code> and optionally <code>"<
 </p>
 
 <a id="toc8" name="toc8"></a>
-<h2>2.6. new_unique_ptr.h</h2>
+<h2>2.6. named_values.h</h2>
+
+<p style="margin-bottom:0">
+The <code>named_values</code> class allows parsing of several named values into
+a map. The format of the named values is the following:
+</p>
+<ul style="margin-top:0">
+<li>the values are semicolon separated
+</li>
+<li>every value has <code>name=value</code> format
+</li>
+<li>the <code>value</code> can be encoded using one of the following:
+  <ul>
+  <li><code>file:file_name</code>: content of the given file name
+  </li>
+  <li><code>data:length:value</code>: the value is exactly <code>length</code> bytes and can include a semicolon
+  </li>
+  <li><code>value</code>: semicolon-separated value
+-
+  </li>
+  </ul>
+</li>
+</ul>
+
+<a id="toc9" name="toc9"></a>
+<h2>2.7. new_unique_ptr.h</h2>
 
 <p>
 The <code>new_unique_ptr</code> method creates a new instance of <code>unique_ptr&lt;T&gt;</code>,
 forwarding all its argument to <code>T</code> constructor.
 </p>
 
-<a id="toc9" name="toc9"></a>
-<h2>2.7. options.h</h2>
+<a id="toc10" name="toc10"></a>
+<h2>2.8. options.h</h2>
 
 <p>
 The <code>options</code> class allow parsing options. For option can take either
@@ -152,54 +179,54 @@ no value, any value, or a specific set of values.
 To use the <code>options</code> class, link <code>options.cpp</code> file.
 </p>
 
-<a id="toc10" name="toc10"></a>
-<h2>2.8. parse_double.h</h2>
+<a id="toc11" name="toc11"></a>
+<h2>2.9. parse_double.h</h2>
 
 <p>
 The <code>parse_double</code> methods parse a double.
 </p>
 
-<a id="toc11" name="toc11"></a>
-<h2>2.9. parse_int.h</h2>
+<a id="toc12" name="toc12"></a>
+<h2>2.10. parse_int.h</h2>
 
 <p>
 The <code>parse_int</code> methods parse a int.
 </p>
 
-<a id="toc12" name="toc12"></a>
-<h2>2.10. pointer_decoder.h</h2>
+<a id="toc13" name="toc13"></a>
+<h2>2.11. pointer_decoder.h</h2>
 
 <p>
 The <code>pointer_decoder</code> class has the same deserializing functionality
 as the <code>binary_decoder</code> class, but deserializes non-owning data.
 </p>
 
-<a id="toc13" name="toc13"></a>
-<h2>2.11. process_args.h</h2>
+<a id="toc14" name="toc14"></a>
+<h2>2.12. process_args.h</h2>
 
 <p>
 Using <code>process_args</code> method, the given <code>processor</code> is called on all
 specified input and output files.
 </p>
 
-<a id="toc14" name="toc14"></a>
-<h2>2.12. split.h</h2>
+<a id="toc15" name="toc15"></a>
+<h2>2.13. split.h</h2>
 
 <p>
 The <code>split</code> methods can split <code>string</code> or <code>string_piece</code> to a vector
 of tokens delimited by a specified delimiter character.
 </p>
 
-<a id="toc15" name="toc15"></a>
-<h2>2.13. string_piece.h</h2>
+<a id="toc16" name="toc16"></a>
+<h2>2.14. string_piece.h</h2>
 
 <p>
 The <code>string_piece</code> structure holds a non-owning reference to a string
 of specified length.
 </p>
 
-<a id="toc16" name="toc16"></a>
-<h2>2.14. threadsafe_stack.h</h2>
+<a id="toc17" name="toc17"></a>
+<h2>2.15. threadsafe_stack.h</h2>
 
 <p>
 The <code>threadsafe_stack</code> class implements a simple stack with <code>push</code> and
@@ -207,8 +234,8 @@ The <code>threadsafe_stack</code> class implements a simple stack with <code>pus
 operations.
 </p>
 
-<a id="toc17" name="toc17"></a>
-<h2>2.15. url_detector.h</h2>
+<a id="toc18" name="toc18"></a>
+<h2>2.16. url_detector.h</h2>
 
 <p>
 The <code>url_detector</code> class allow recognizing URLs and emails. Either the whole
