@@ -63,7 +63,11 @@ void iostreams_compilation() {
   getpara(cin, str);
 }
 
+void named_values_compilation() {
+  named_values::map values;
+  string error;
 
+  named_values::parse("a=b;c=data:3:1;2", values, error);
 }
 
 void new_unique_ptr_compilation() {
