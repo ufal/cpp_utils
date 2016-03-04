@@ -10,6 +10,7 @@
 #include "binary_decoder.h"
 #include "binary_encoder.h"
 #include "compressor.h"
+#include "getpara.h"
 #include "iostreams.h"
 #include "named_values.h"
 #include "new_unique_ptr.h"
@@ -54,13 +55,16 @@ void binary_encoder_compilation() {
   enc.add_data("a", 1);
 }
 
-void iostreams_compilation() {
+void getpara_compilation() {
   string str;
 
+  getpara(cin, str);
+}
+
+void iostreams_compilation() {
   iostreams_init();
   iostreams_init_binary_input();
   iostreams_init_binary_output();
-  getpara(cin, str);
 }
 
 void named_values_compilation() {
