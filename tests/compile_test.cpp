@@ -11,7 +11,6 @@
 #include "binary_encoder.h"
 #include "compressor.h"
 #include "iostreams.h"
-#include "iostreams_xml.h"
 #include "named_values.h"
 #include "new_unique_ptr.h"
 #include "options.h"
@@ -23,6 +22,7 @@
 #include "string_piece.h"
 #include "threadsafe_stack.h"
 #include "url_detector.h"
+#include "xml_encoded.h"
 
 using namespace ufal::utils;
 
@@ -63,10 +63,7 @@ void iostreams_compilation() {
   getpara(cin, str);
 }
 
-void iostreams_xml_compilation() {
-  string str;
 
-  cout << xml_encoded("a") << xml_encoded(str, true);
 }
 
 void new_unique_ptr_compilation() {
@@ -118,6 +115,12 @@ void threadsafe_stack_compilation() {
 
 void url_detector_compilation() {
   url_detector::detect("http://ufal.mff.cuni.cz");
+}
+
+void xml_encoded_compilation() {
+  string str;
+
+  cout << xml_encoded("a") << xml_encoded(str, true);
 }
 
 int main(void) {

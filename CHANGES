@@ -1,5 +1,6 @@
 Version 1.1.1-devel
 -------------------
+- Rename iostreams.h to xml_encoded.h.
 
 
 Version 1.1.0 [03 Mar 2016]

@@ -43,10 +43,6 @@ The ``iostreams.h`` file contains methods for various initializations of C++
 iostreams and for loading a whole paragraph from istream.
 
 
-== iostreams_xml.h ==
-
-Using the ``xml_encoded`` class, content of a string_piece can be appended
-to an ostream, while encoding ``<>&`` and optionally ``"`` using XML entities.
 
 
 == named_values.h ==
@@ -130,3 +126,11 @@ The ``url_detector`` class allow recognizing URLs and emails. Either the whole
 given string must match, or only its prefix.
 
 To use the ``url_detector`` class, link ``url_detector.cpp`` file.
+
+
+== xml_encoded.h ==
+
+Using the ``xml_encoded`` class, content of a string_piece can be appended
+to an ostream, while encoding ``<>&`` and optionally ``"`` using XML entities.
+
+
