@@ -1,5 +1,5 @@
 UFAL C++ Utils
-Version 1.1.1-devel
+Version 2.0.0
 
 Introduction
 ============
@@ -52,11 +52,20 @@ To use compressor::load method, link the compressor_load.cpp file. To use
 compressor::save method, link the compressor_save.cpp file.
 
 
+getpara.h
+---------
+
+The getpara method foads whole paragraph from an istream.
+
+
 iostreams.h
 -----------
 
 The iostreams.h file contains methods for various initializations of C++
-iostreams and for loading a whole paragraph from istream.
+iostreams that should be called before any output is produced:
+- iostreams_init: switch off the synchronization with C stdio
+- iostreams_init_binary_input: change cin to binary mode
+- iostreams_init_binary_output: change cout to binary mode
 
 
 named_values.h
