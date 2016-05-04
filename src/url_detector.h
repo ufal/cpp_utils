@@ -27,4 +27,3 @@ class url_detector {
 
 } // namespace utils
 } // namespace ufal
-
