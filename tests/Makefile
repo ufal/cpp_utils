@@ -1,6 +1,6 @@
 include Makefile.builtem
 
-TARGETS = compile_test compile_test_bundle url_detector_test
+TARGETS = compile_test compile_test_bundle named_values_test url_detector_test
 
 C_FLAGS += $(call include_dir,../src)
 
@@ -13,6 +13,9 @@ $(call exe,compile_test): $(call obj,compile_test ../src/compressor_load ../src/
 	$(call link_exe,$@,$^,$(call win_subsystem,console))
 
 $(call exe,compile_test_bundle): $(call obj,compile_test_bundle)
+	$(call link_exe,$@,$^,$(call win_subsystem,console))
+
+$(call exe,named_values_test): $(call obj,named_values_test)
 	$(call link_exe,$@,$^,$(call win_subsystem,console))
 
 $(call exe,url_detector_test): $(call obj,url_detector_test ../src/url_detector)

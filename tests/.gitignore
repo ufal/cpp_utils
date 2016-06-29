@@ -1,5 +1,6 @@
 .build/
 compile_test
 compile_test_bundle
+named_values_test
 url_detector_test
 *.exe
