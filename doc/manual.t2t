@@ -39,7 +39,12 @@ To use ``compressor::save`` method, link the ``compressor_save.cpp`` file.
 
 == getpara.h ==
 
-The ``getpara`` method foads whole paragraph from an ``istream``.
+The ``getpara`` method loads whole paragraph from an ``istream``.
+
+
+== getwhole.h ==
+
+The ``getwhole`` method loads all content from an ``istream``.
 
 
 == iostreams.h ==

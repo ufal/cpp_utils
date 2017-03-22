@@ -11,6 +11,7 @@
 #include "binary_encoder.h"
 #include "compressor.h"
 #include "getpara.h"
+#include "getwhole.h"
 #include "iostreams.h"
 #include "named_values.h"
 #include "new_unique_ptr.h"
@@ -59,6 +60,12 @@ void getpara_compilation() {
   string str;
 
   getpara(cin, str);
+}
+
+void getwhole_compilation() {
+  string str;
+
+  getwhole(cin, str);
 }
 
 void iostreams_compilation() {

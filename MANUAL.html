@@ -27,31 +27,33 @@
     </li>
     <li><a href="#toc6">2.4. getpara.h</a>
     </li>
-    <li><a href="#toc7">2.5. iostreams.h</a>
+    <li><a href="#toc7">2.5. getwhole.h</a>
     </li>
-    <li><a href="#toc8">2.6. named_values.h</a>
+    <li><a href="#toc8">2.6. iostreams.h</a>
     </li>
-    <li><a href="#toc9">2.7. new_unique_ptr.h</a>
+    <li><a href="#toc9">2.7. named_values.h</a>
     </li>
-    <li><a href="#toc10">2.8. options.h</a>
+    <li><a href="#toc10">2.8. new_unique_ptr.h</a>
     </li>
-    <li><a href="#toc11">2.9. parse_double.h</a>
+    <li><a href="#toc11">2.9. options.h</a>
     </li>
-    <li><a href="#toc12">2.10. parse_int.h</a>
+    <li><a href="#toc12">2.10. parse_double.h</a>
     </li>
-    <li><a href="#toc13">2.11. pointer_decoder.h</a>
+    <li><a href="#toc13">2.11. parse_int.h</a>
     </li>
-    <li><a href="#toc14">2.12. process_args.h</a>
+    <li><a href="#toc14">2.12. pointer_decoder.h</a>
     </li>
-    <li><a href="#toc15">2.13. split.h</a>
+    <li><a href="#toc15">2.13. process_args.h</a>
     </li>
-    <li><a href="#toc16">2.14. string_piece.h</a>
+    <li><a href="#toc16">2.14. split.h</a>
     </li>
-    <li><a href="#toc17">2.15. threadsafe_stack.h</a>
+    <li><a href="#toc17">2.15. string_piece.h</a>
     </li>
-    <li><a href="#toc18">2.16. url_detector.h</a>
+    <li><a href="#toc18">2.16. threadsafe_stack.h</a>
     </li>
-    <li><a href="#toc19">2.17. xml_encoded.h</a>
+    <li><a href="#toc19">2.17. url_detector.h</a>
+    </li>
+    <li><a href="#toc20">2.18. xml_encoded.h</a>
     </li>
     </ul>
   </li>
@@ -125,11 +127,18 @@ To use <code>compressor::save</code> method, link the <code>compressor_save.cpp<
 <h2>2.4. getpara.h</h2>
 
 <p>
-The <code>getpara</code> method foads whole paragraph from an <code>istream</code>.
+The <code>getpara</code> method loads whole paragraph from an <code>istream</code>.
 </p>
 
 <a id="toc7" name="toc7"></a>
-<h2>2.5. iostreams.h</h2>
+<h2>2.5. getwhole.h</h2>
+
+<p>
+The <code>getwhole</code> method loads all content from an <code>istream</code>.
+</p>
+
+<a id="toc8" name="toc8"></a>
+<h2>2.6. iostreams.h</h2>
 
 <p style="margin-bottom:0">
 The <code>iostreams.h</code> file contains methods for various initializations of C++
@@ -144,8 +153,8 @@ iostreams that should be called before any output is produced:
 </li>
 </ul>
 
-<a id="toc8" name="toc8"></a>
-<h2>2.6. named_values.h</h2>
+<a id="toc9" name="toc9"></a>
+<h2>2.7. named_values.h</h2>
 
 <p style="margin-bottom:0">
 The <code>named_values</code> class allows parsing of several named values into
@@ -169,16 +178,16 @@ a map. The format of the named values is the following:
 </li>
 </ul>
 
-<a id="toc9" name="toc9"></a>
-<h2>2.7. new_unique_ptr.h</h2>
+<a id="toc10" name="toc10"></a>
+<h2>2.8. new_unique_ptr.h</h2>
 
 <p>
 The <code>new_unique_ptr</code> method creates a new instance of <code>unique_ptr&lt;T&gt;</code>,
 forwarding all its argument to <code>T</code> constructor.
 </p>
 
-<a id="toc10" name="toc10"></a>
-<h2>2.8. options.h</h2>
+<a id="toc11" name="toc11"></a>
+<h2>2.9. options.h</h2>
 
 <p>
 The <code>options</code> class allow parsing options. For option can take either
@@ -188,30 +197,30 @@ no value, any value, or a specific set of values.
 To use the <code>options</code> class, link <code>options.cpp</code> file.
 </p>
 
-<a id="toc11" name="toc11"></a>
-<h2>2.9. parse_double.h</h2>
+<a id="toc12" name="toc12"></a>
+<h2>2.10. parse_double.h</h2>
 
 <p>
 The <code>parse_double</code> methods parse a double.
 </p>
 
-<a id="toc12" name="toc12"></a>
-<h2>2.10. parse_int.h</h2>
+<a id="toc13" name="toc13"></a>
+<h2>2.11. parse_int.h</h2>
 
 <p>
 The <code>parse_int</code> methods parse a int.
 </p>
 
-<a id="toc13" name="toc13"></a>
-<h2>2.11. pointer_decoder.h</h2>
+<a id="toc14" name="toc14"></a>
+<h2>2.12. pointer_decoder.h</h2>
 
 <p>
 The <code>pointer_decoder</code> class has the same deserializing functionality
 as the <code>binary_decoder</code> class, but deserializes non-owning data.
 </p>
 
-<a id="toc14" name="toc14"></a>
-<h2>2.12. process_args.h</h2>
+<a id="toc15" name="toc15"></a>
+<h2>2.13. process_args.h</h2>
 
 <p style="margin-bottom:0">
 Using <code>process_args</code> and <code>process_args_with_output_template</code> methods, the
@@ -229,24 +238,24 @@ The two methods differ in how they derive the name of the output file.
 </li>
 </ul>
 
-<a id="toc15" name="toc15"></a>
-<h2>2.13. split.h</h2>
+<a id="toc16" name="toc16"></a>
+<h2>2.14. split.h</h2>
 
 <p>
 The <code>split</code> methods can split <code>string</code> or <code>string_piece</code> to a vector
 of tokens delimited by a specified delimiter character.
 </p>
 
-<a id="toc16" name="toc16"></a>
-<h2>2.14. string_piece.h</h2>
+<a id="toc17" name="toc17"></a>
+<h2>2.15. string_piece.h</h2>
 
 <p>
 The <code>string_piece</code> structure holds a non-owning reference to a string
 of specified length.
 </p>
 
-<a id="toc17" name="toc17"></a>
-<h2>2.15. threadsafe_stack.h</h2>
+<a id="toc18" name="toc18"></a>
+<h2>2.16. threadsafe_stack.h</h2>
 
 <p>
 The <code>threadsafe_stack</code> class implements a simple stack with <code>push</code> and
@@ -254,8 +263,8 @@ The <code>threadsafe_stack</code> class implements a simple stack with <code>pus
 operations.
 </p>
 
-<a id="toc18" name="toc18"></a>
-<h2>2.16. url_detector.h</h2>
+<a id="toc19" name="toc19"></a>
+<h2>2.17. url_detector.h</h2>
 
 <p>
 The <code>url_detector</code> class allow recognizing URLs and emails. Either the whole
@@ -265,8 +274,8 @@ given string must match, or only its prefix.
 To use the <code>url_detector</code> class, link <code>url_detector.cpp</code> file.
 </p>
 
-<a id="toc19" name="toc19"></a>
-<h2>2.17. xml_encoded.h</h2>
+<a id="toc20" name="toc20"></a>
+<h2>2.18. xml_encoded.h</h2>
 
 <p>
 Using the <code>xml_encoded</code> class, content of a string_piece can be appended
