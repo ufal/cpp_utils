@@ -112,6 +112,7 @@ void pointer_decoder_compilation() {
 
 void process_args_compilation(int argi, int argc, char* argv[]) {
   process_args(argi, argc, argv, [](istream&, ostream&, string_piece){}, "a");
+  process_args_with_output_template(argi, argc, argv, "", [](istream&, ostream&, string, string, string_piece){}, "a");
 }
 
 void split_compilation() {

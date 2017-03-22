@@ -1,6 +1,7 @@
 Version 2.1.1-devel
 -------------------
 - Add getwhole.h header.
+- Pass input and output filename to process_args_with_output_template.
 
 
 Version 2.1.0 [29 Jun 2016]
