@@ -1,5 +1,5 @@
-Version 3.0.1-devel
--------------------
+Version 3.1.0 [29 Mar 2017]
+---------------------------
 - Allow specifying binary mode in process_args_with_output_template.
 
 
