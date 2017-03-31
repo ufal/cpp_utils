@@ -1,5 +1,5 @@
-Version 3.1.1-devel
--------------------
+Version 3.1.1 [31 Mar 2017]
+---------------------------
 - Support leading + in parse_int and parse_double
 - Support exponent in parse_double
 
