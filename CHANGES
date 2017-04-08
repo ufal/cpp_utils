@@ -1,4 +1,4 @@
-Version 3.1.2-devel
+Version 3.2.0 [08 Apr 2017]
 ---------------------------
 - Add threadsafe_resource_loader.h header
 
