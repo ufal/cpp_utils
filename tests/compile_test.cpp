@@ -23,6 +23,7 @@
 #include "split.h"
 #include "string_piece.h"
 #include "threadsafe_stack.h"
+#include "threadsafe_resource_loader.h"
 #include "url_detector.h"
 #include "xml_encoded.h"
 
@@ -127,6 +128,26 @@ void threadsafe_stack_compilation() {
   threadsafe_stack<int> stack;
   stack.push(nullptr);
   stack.pop();
+}
+
+void threadsafe_resource_loader_compilation() {
+  struct resource {
+    bool load() { return true; }
+    void release() {}
+  };
+  enum { LIMIT = 5, CONCURRENT_LIMIT = 2 };
+
+  resource resources[LIMIT];
+
+  threadsafe_resource_loader<resource> loader(CONCURRENT_LIMIT);
+
+  for (auto&& r : resources)
+    loader.add(&r);
+
+  loader.load(0);
+  loader.load(1);
+  loader.release(0);
+  loader.release(1);
 }
 
 void url_detector_compilation() {

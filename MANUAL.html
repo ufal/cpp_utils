@@ -49,11 +49,13 @@
     </li>
     <li><a href="#toc17">2.15. string_piece.h</a>
     </li>
-    <li><a href="#toc18">2.16. threadsafe_stack.h</a>
+    <li><a href="#toc18">2.16. threadsafe_resource_loader.h</a>
     </li>
-    <li><a href="#toc19">2.17. url_detector.h</a>
+    <li><a href="#toc19">2.17. threadsafe_stack.h</a>
     </li>
-    <li><a href="#toc20">2.18. xml_encoded.h</a>
+    <li><a href="#toc20">2.18. url_detector.h</a>
+    </li>
+    <li><a href="#toc21">2.19. xml_encoded.h</a>
     </li>
     </ul>
   </li>
@@ -255,7 +257,17 @@ of specified length.
 </p>
 
 <a id="toc18" name="toc18"></a>
-<h2>2.16. threadsafe_stack.h</h2>
+<h2>2.16. threadsafe_resource_loader.h</h2>
+
+<p>
+The <code>threadsafe_resource_loader</code> class implements a resource loader for
+resources providing <code>load</code> and <code>release</code> methods. The resource loader
+provides thread-safe implementations of <code>load</code> and <code>release</code> methods,
+limiting the number of concurrently loaded resources to a given bound.
+</p>
+
+<a id="toc19" name="toc19"></a>
+<h2>2.17. threadsafe_stack.h</h2>
 
 <p>
 The <code>threadsafe_stack</code> class implements a simple stack with <code>push</code> and
@@ -263,8 +275,8 @@ The <code>threadsafe_stack</code> class implements a simple stack with <code>pus
 operations.
 </p>
 
-<a id="toc19" name="toc19"></a>
-<h2>2.17. url_detector.h</h2>
+<a id="toc20" name="toc20"></a>
+<h2>2.18. url_detector.h</h2>
 
 <p>
 The <code>url_detector</code> class allow recognizing URLs and emails. Either the whole
@@ -274,8 +286,8 @@ given string must match, or only its prefix.
 To use the <code>url_detector</code> class, link <code>url_detector.cpp</code> file.
 </p>
 
-<a id="toc20" name="toc20"></a>
-<h2>2.18. xml_encoded.h</h2>
+<a id="toc21" name="toc21"></a>
+<h2>2.19. xml_encoded.h</h2>
 
 <p>
 Using the <code>xml_encoded</code> class, content of a string_piece can be appended

@@ -125,6 +125,14 @@ The ``string_piece`` structure holds a non-owning reference to a string
 of specified length.
 
 
+== threadsafe_resource_loader.h ==
+
+The ``threadsafe_resource_loader`` class implements a resource loader for
+resources providing ``load`` and ``release`` methods. The resource loader
+provides thread-safe implementations of ``load`` and ``release`` methods,
+limiting the number of concurrently loaded resources to a given bound.
+
+
 == threadsafe_stack.h ==
 
 The ``threadsafe_stack`` class implements a simple stack with ``push`` and

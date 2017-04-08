@@ -1,6 +1,7 @@
 include Makefile.builtem
 
-TARGETS = compile_test compile_test_bundle named_values_test parse_value_test url_detector_test
+TARGETS = compile_test compile_test_bundle named_values_test parse_value_test
+TARGETS+= threadsafe_resource_loader_burn_test threadsafe_resource_loader_test url_detector_test
 
 C_FLAGS += $(call include_dir,../src)
 
@@ -9,19 +10,11 @@ all: compile
 
 compile: $(call exe,$(TARGETS))
 
-$(call exe,compile_test): $(call obj,compile_test ../src/compressor_load ../src/compressor_save ../src/options ../src/url_detector)
-	$(call link_exe,$@,$^,$(call win_subsystem,console))
+$(call exe,compile_test): $(call obj,../src/compressor_load ../src/compressor_save ../src/options ../src/url_detector)
+$(call exe,threadsafe_resource_loader_burn_test threadsafe_resource_loader_test): LD_FLAGS+=$(call use_threads)
+$(call exe,url_detector_test): $(call obj,../src/url_detector)
 
-$(call exe,compile_test_bundle): $(call obj,compile_test_bundle)
-	$(call link_exe,$@,$^,$(call win_subsystem,console))
-
-$(call exe,named_values_test): $(call obj,named_values_test)
-	$(call link_exe,$@,$^,$(call win_subsystem,console))
-
-$(call exe,parse_value_test): $(call obj,parse_value_test)
-	$(call link_exe,$@,$^,$(call win_subsystem,console))
-
-$(call exe,url_detector_test): $(call obj,url_detector_test ../src/url_detector)
+$(call exe,%): $$(call obj,%)
 	$(call link_exe,$@,$^,$(call win_subsystem,console))
 
 .PHONY: clean
