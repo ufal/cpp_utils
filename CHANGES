@@ -1,5 +1,7 @@
 Version 3.2.2-devel
 -------------------
+- Add run_process method executing given executable with given arguments,
+  optionaly capturing standard output.
 
 
 Version 3.2.1 [08 Apr 2017]

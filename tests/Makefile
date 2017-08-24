@@ -1,6 +1,6 @@
 include Makefile.builtem
 
-TARGETS = compile_test compile_test_bundle named_values_test parse_value_test
+TARGETS = compile_test compile_test_bundle named_values_test parse_value_test run_process_test
 TARGETS+= threadsafe_resource_loader_burn_test threadsafe_resource_loader_test url_detector_test
 
 C_FLAGS += $(call include_dir,../src)

@@ -113,6 +113,15 @@ The two methods differ in how they derive the name of the output file.
 -
 
 
+== run_process.h ==
+
+The ``run_process`` method executed the given command with given arguments, and
+optionally captured standard output of the command.
+
+The API also offers the possibility of providing standard input and/or
+capturing standard error output, but that functionality is currently not implemented.
+
+
 == split.h ==
 
 The ``split`` methods can split ``string`` or ``string_piece`` to a vector

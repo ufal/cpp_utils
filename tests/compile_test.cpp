@@ -20,6 +20,7 @@
 #include "parse_int.h"
 #include "pointer_decoder.h"
 #include "process_args.h"
+#include "run_process.h"
 #include "split.h"
 #include "string_piece.h"
 #include "threadsafe_stack.h"
@@ -114,6 +115,12 @@ void pointer_decoder_compilation() {
 void process_args_compilation(int argi, int argc, char* argv[]) {
   process_args(argi, argc, argv, [](istream&, ostream&, string_piece){}, "a");
   process_args_with_output_template(argi, argc, argv, "", [](istream&, ostream&, string, string, string_piece){}, "a");
+}
+
+void run_process_compilation() {
+  string output;
+
+  run_process({"echo", "5"}, nullptr, &output, nullptr);
 }
 
 void split_compilation() {

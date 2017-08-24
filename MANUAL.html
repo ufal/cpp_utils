@@ -45,17 +45,19 @@
     </li>
     <li><a href="#toc15">2.13. process_args.h</a>
     </li>
-    <li><a href="#toc16">2.14. split.h</a>
+    <li><a href="#toc16">2.14. run_process.h</a>
     </li>
-    <li><a href="#toc17">2.15. string_piece.h</a>
+    <li><a href="#toc17">2.15. split.h</a>
     </li>
-    <li><a href="#toc18">2.16. threadsafe_resource_loader.h</a>
+    <li><a href="#toc18">2.16. string_piece.h</a>
     </li>
-    <li><a href="#toc19">2.17. threadsafe_stack.h</a>
+    <li><a href="#toc19">2.17. threadsafe_resource_loader.h</a>
     </li>
-    <li><a href="#toc20">2.18. url_detector.h</a>
+    <li><a href="#toc20">2.18. threadsafe_stack.h</a>
     </li>
-    <li><a href="#toc21">2.19. xml_encoded.h</a>
+    <li><a href="#toc21">2.19. url_detector.h</a>
+    </li>
+    <li><a href="#toc22">2.20. xml_encoded.h</a>
     </li>
     </ul>
   </li>
@@ -241,23 +243,35 @@ The two methods differ in how they derive the name of the output file.
 </ul>
 
 <a id="toc16" name="toc16"></a>
-<h2>2.14. split.h</h2>
+<h2>2.14. run_process.h</h2>
+
+<p>
+The <code>run_process</code> method executed the given command with given arguments, and
+optionally captured standard output of the command.
+</p>
+<p>
+The API also offers the possibility of providing standard input and/or
+capturing standard error output, but that functionality is currently not implemented.
+</p>
+
+<a id="toc17" name="toc17"></a>
+<h2>2.15. split.h</h2>
 
 <p>
 The <code>split</code> methods can split <code>string</code> or <code>string_piece</code> to a vector
 of tokens delimited by a specified delimiter character.
 </p>
 
-<a id="toc17" name="toc17"></a>
-<h2>2.15. string_piece.h</h2>
+<a id="toc18" name="toc18"></a>
+<h2>2.16. string_piece.h</h2>
 
 <p>
 The <code>string_piece</code> structure holds a non-owning reference to a string
 of specified length.
 </p>
 
-<a id="toc18" name="toc18"></a>
-<h2>2.16. threadsafe_resource_loader.h</h2>
+<a id="toc19" name="toc19"></a>
+<h2>2.17. threadsafe_resource_loader.h</h2>
 
 <p>
 The <code>threadsafe_resource_loader</code> class implements a resource loader for
@@ -266,8 +280,8 @@ provides thread-safe implementations of <code>load</code> and <code>release</cod
 limiting the number of concurrently loaded resources to a given bound.
 </p>
 
-<a id="toc19" name="toc19"></a>
-<h2>2.17. threadsafe_stack.h</h2>
+<a id="toc20" name="toc20"></a>
+<h2>2.18. threadsafe_stack.h</h2>
 
 <p>
 The <code>threadsafe_stack</code> class implements a simple stack with <code>push</code> and
@@ -275,8 +289,8 @@ The <code>threadsafe_stack</code> class implements a simple stack with <code>pus
 operations.
 </p>
 
-<a id="toc20" name="toc20"></a>
-<h2>2.18. url_detector.h</h2>
+<a id="toc21" name="toc21"></a>
+<h2>2.19. url_detector.h</h2>
 
 <p>
 The <code>url_detector</code> class allow recognizing URLs and emails. Either the whole
@@ -286,8 +300,8 @@ given string must match, or only its prefix.
 To use the <code>url_detector</code> class, link <code>url_detector.cpp</code> file.
 </p>
 
-<a id="toc21" name="toc21"></a>
-<h2>2.19. xml_encoded.h</h2>
+<a id="toc22" name="toc22"></a>
+<h2>2.20. xml_encoded.h</h2>
 
 <p>
 Using the <code>xml_encoded</code> class, content of a string_piece can be appended
