@@ -176,6 +176,21 @@ The threadsafe_stack class implements a simple stack with push and pop methods,
 which are thread-safe and implemented using lock-free operations.
 
 
+unaligned_access.h
+------------------
+
+The unaligned_access.h header provides several methods for loading and storing
+values using unaligned pointers.
+
+Provided are the following methods:
+- unaligned_load: unaligned load
+- unaligned_load_inc: unaligned load and increment
+- unaligned_store: unaligned store
+- unaligned_store_inc: unaligned store and increment
+- unaligned_lower_bound, unaligned_upper_bound: analogues of
+  std::{lower,upper}_bound methods
+
+
 url_detector.h
 --------------
 

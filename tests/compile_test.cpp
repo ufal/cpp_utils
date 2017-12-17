@@ -25,6 +25,7 @@
 #include "string_piece.h"
 #include "threadsafe_stack.h"
 #include "threadsafe_resource_loader.h"
+#include "unaligned_access.h"
 #include "url_detector.h"
 #include "xml_encoded.h"
 

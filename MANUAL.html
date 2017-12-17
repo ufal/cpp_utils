@@ -55,9 +55,11 @@
     </li>
     <li><a href="#toc20">2.18. threadsafe_stack.h</a>
     </li>
-    <li><a href="#toc21">2.19. url_detector.h</a>
+    <li><a href="#toc21">2.19. unaligned_access.h</a>
     </li>
-    <li><a href="#toc22">2.20. xml_encoded.h</a>
+    <li><a href="#toc22">2.20. url_detector.h</a>
+    </li>
+    <li><a href="#toc23">2.21. xml_encoded.h</a>
     </li>
     </ul>
   </li>
@@ -290,7 +292,31 @@ operations.
 </p>
 
 <a id="toc21" name="toc21"></a>
-<h2>2.19. url_detector.h</h2>
+<h2>2.19. unaligned_access.h</h2>
+
+<p>
+The <code>unaligned_access.h</code> header provides several methods for loading
+and storing values using unaligned pointers.
+</p>
+<p style="margin-bottom:0">
+Provided are the following methods:
+</p>
+<ul style="margin-top:0">
+<li><code>unaligned_load</code>: unaligned load
+</li>
+<li><code>unaligned_load_inc</code>: unaligned load and increment
+</li>
+<li><code>unaligned_store</code>: unaligned store
+</li>
+<li><code>unaligned_store_inc</code>: unaligned store and increment
+</li>
+<li><code>unaligned_lower_bound</code>, <code>unaligned_upper_bound</code>: analogues
+  of <code>std::{lower,upper}_bound</code> methods
+</li>
+</ul>
+
+<a id="toc22" name="toc22"></a>
+<h2>2.20. url_detector.h</h2>
 
 <p>
 The <code>url_detector</code> class allow recognizing URLs and emails. Either the whole
@@ -300,8 +326,8 @@ given string must match, or only its prefix.
 To use the <code>url_detector</code> class, link <code>url_detector.cpp</code> file.
 </p>
 
-<a id="toc22" name="toc22"></a>
-<h2>2.20. xml_encoded.h</h2>
+<a id="toc23" name="toc23"></a>
+<h2>2.21. xml_encoded.h</h2>
 
 <p>
 Using the <code>xml_encoded</code> class, content of a string_piece can be appended
