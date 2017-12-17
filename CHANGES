@@ -1,5 +1,6 @@
 Version 3.3.1-devel
 -------------------
+- Fix unaligned loads in binary_decoder and pointer_decoder.
 
 
 Version 3.3.0 [24 Aug 2017]
