@@ -1,5 +1,6 @@
 Version 3.4.1-devel
 -------------------
+- Fix bug in binary_decoder and pointer_decoder introduces by 3.4.0.
 
 
 Version 3.4.0 [17 Dec 2017]
