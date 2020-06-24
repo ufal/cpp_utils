@@ -1,5 +1,6 @@
-Version 3.4.3-devel
--------------------
+Version 3.4.3 [24 Jun 2020]
+---------------------------
+- Fix the error message in add_2B and add_4B.
 
 
 Version 3.4.2 [24 Nov 2018]
