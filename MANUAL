@@ -208,6 +208,14 @@ string must match, or only its prefix.
 To use the url_detector class, link url_detector.cpp file.
 
 
+win_wmain_utf8.cpp
+------------------
+
+This source file adds a Unicode wmain Windows method. When linked in and when
+the entry point is set to wmain, it sets console code page to UTF-8, converts
+the UTF-16 command line arguments to UTF-8, and calls main.
+
+
 xml_encoded.h
 -------------
 

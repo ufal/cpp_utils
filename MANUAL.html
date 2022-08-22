@@ -61,7 +61,9 @@
     </li>
     <li><a href="#toc23">2.21. url_detector.h</a>
     </li>
-    <li><a href="#toc24">2.22. xml_encoded.h</a>
+    <li><a href="#toc24">2.22. win_wmain_utf8.cpp</a>
+    </li>
+    <li><a href="#toc25">2.23. xml_encoded.h</a>
     </li>
     </ul>
   </li>
@@ -338,7 +340,16 @@ To use the <code>url_detector</code> class, link <code>url_detector.cpp</code> f
 </p>
 
 <a id="toc24" name="toc24"></a>
-<h2>2.22. xml_encoded.h</h2>
+<h2>2.22. win_wmain_utf8.cpp</h2>
+
+<p>
+This source file adds a Unicode <code>wmain</code> Windows method. When linked in and
+when the entry point is set to <code>wmain</code>, it sets console code page to UTF-8,
+converts the UTF-16 command line arguments to UTF-8, and calls <code>main</code>.
+</p>
+
+<a id="toc25" name="toc25"></a>
+<h2>2.23. xml_encoded.h</h2>
 
 <p>
 Using the <code>xml_encoded</code> class, content of a string_piece can be appended
