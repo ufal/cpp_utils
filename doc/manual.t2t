@@ -83,6 +83,14 @@ no value, any value, or a specific set of values.
 
 To use the ``options`` class, link ``options.cpp`` file.
 
+
+== path_from_utf8.h ==
+
+The ``path_from_utf8`` converts a UTF-8 encoded string (either a ``const char*``
+or a ``const string&``) into a path, which is platform-specific string: a
+UTF-16 encoded ``wstring`` on Windows and UTF-8 encoded ``string`` otherwise.
+
+
 == parse_double.h ==
 
 The ``parse_double`` methods parse a double.

@@ -1,5 +1,6 @@
 Version 3.4.4-devel
 -------------------
+- Add path_from_utf8.h header.
 
 
 Version 3.4.3 [24 Jun 2020]
