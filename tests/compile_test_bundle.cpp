@@ -12,3 +12,4 @@
 #include "compressor_save.cpp"
 #include "options.cpp"
 #include "url_detector.cpp"
+#include "win_wmain_utf8.cpp"

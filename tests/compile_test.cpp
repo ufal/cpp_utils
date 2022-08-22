@@ -18,6 +18,7 @@
 #include "options.h"
 #include "parse_double.h"
 #include "parse_int.h"
+#include "path_from_utf8.h"
 #include "pointer_decoder.h"
 #include "process_args.h"
 #include "run_process.h"
@@ -168,6 +169,6 @@ void xml_encoded_compilation() {
   cout << xml_encoded("a") << xml_encoded(str, true);
 }
 
-int main(void) {
+int main(int argc, char* argv[]) {
   return 0;
 }

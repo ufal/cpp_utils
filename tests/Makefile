@@ -21,4 +21,4 @@ $(TESTS): $(call exe,%): $$(call obj,%)
 
 .PHONY: clean
 clean:
-	$(call rm,.build $(TESTS))
+	$(call rm,.build $(call all_exe,$(TESTS)))
