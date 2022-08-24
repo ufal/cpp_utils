@@ -1,4 +1,4 @@
 UFAL C++ Utils
-[![Build Status](https://travis-ci.org/ufal/cpp_utils.svg?branch=master)](https://travis-ci.org/ufal/cpp_utils)
+[![Compile test](https://github.com/ufal/cpp_utils/actions/workflows/compile_test.yml/badge.svg)](https://github.com/ufal/cpp_utils/actions/workflows/compile_test.yml)
 
 %!include: readme.t2t

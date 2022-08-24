@@ -1,5 +1,5 @@
 # UFAL C++ Utils
-[![Build Status](https://travis-ci.org/ufal/cpp_utils.svg?branch=master)](https://travis-ci.org/ufal/cpp_utils)
+[![Compile test](https://github.com/ufal/cpp_utils/actions/workflows/compile_test.yml/badge.svg)](https://github.com/ufal/cpp_utils/actions/workflows/compile_test.yml)
 
 UFAL C++ Utils is a small C++ cross-platform library used in several
 UFAL projects. It is released under [MPL 2.0 license](http://www.mozilla.org/MPL/2.0/)
