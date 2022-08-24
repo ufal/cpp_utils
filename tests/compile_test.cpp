@@ -169,6 +169,6 @@ void xml_encoded_compilation() {
   cout << xml_encoded("a") << xml_encoded(str, true);
 }
 
-int main(int argc, char* argv[]) {
+int main(int /*argc*/, char* /*argv*/[]) {
   return 0;
 }
