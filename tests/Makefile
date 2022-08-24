@@ -6,6 +6,7 @@ TESTS+= $(call exe,threadsafe_resource_loader_burn_test)
 TESTS+= $(call exe,threadsafe_resource_loader_test url_detector_test)
 
 C_FLAGS += $(call include_dir,../src)
+C_FLAGS += $(treat_warnings_as_errors)
 
 .PHONY: all compile
 all: compile
