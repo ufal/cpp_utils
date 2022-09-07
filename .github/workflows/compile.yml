@@ -1,10 +1,10 @@
-name: Compile test
+name: Compile
 
 on: push
 
 jobs:
-  compile_test:
-    name: Compile test
+  compile:
+    name: Compile
     runs-on: ${{ matrix.os }}
     container: ${{ matrix.container }}
     strategy:

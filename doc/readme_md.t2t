@@ -1,4 +1,4 @@
 UFAL C++ Utils
-[![Compile test](https://github.com/ufal/cpp_utils/actions/workflows/compile_test.yml/badge.svg)](https://github.com/ufal/cpp_utils/actions/workflows/compile_test.yml)
+[![Compile Status](https://github.com/ufal/cpp_utils/actions/workflows/compile.yml/badge.svg)](https://github.com/ufal/cpp_utils/actions/workflows/compile.yml)
 
 %!include: readme.t2t
