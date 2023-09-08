@@ -1,3 +1,7 @@
+Version 3.5.4-dev
+-----------------
+
+
 Version 3.5.3 [8 Sep 2023]
 --------------------------
 - Add explicit initialization to silence false positive valgrind
