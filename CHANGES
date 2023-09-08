@@ -1,5 +1,7 @@
 Version 3.5.3-dev
 -----------------
+- Add explicit initialization to silence false positive valgrind
+  report in compressor_save.cpp.
 
 
 Version 3.5.2 [07 Sep 2022]
