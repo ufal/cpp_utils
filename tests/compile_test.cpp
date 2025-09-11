@@ -103,7 +103,14 @@ void parse_int_compilation() {
 }
 
 void pointer_decoder_compilation() {
-  const unsigned char* ptr = nullptr;
+  const unsigned char data[] = {
+    0,
+    0, 0,
+    0, 0, 0, 0,
+    0,
+    1,
+  };
+  const unsigned char* ptr = data;
   pointer_decoder dec(ptr);
   string str;
 
