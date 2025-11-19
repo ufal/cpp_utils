@@ -1,5 +1,5 @@
-Version 3.5.4-dev
------------------
+Version 3.5.4 [19 Nov 2025]
+---------------------------
 - Remove unused function in `compressor_save.cpp` causing warnings in g++.
 
 
