@@ -1,6 +1,7 @@
 Version 3.5.5-dev
 -----------------
 - Fix compiler warnings in `parse_int` and `parse_double`.
+- Avoid UBSan errors in `unaligned_access.h`.
 
 
 Version 3.5.4 [19 Nov 2025]
