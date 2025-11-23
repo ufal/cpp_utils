@@ -166,6 +166,18 @@ void threadsafe_resource_loader_compilation() {
   loader.release(1);
 }
 
+void unaligned_access_compilation() {
+  float array[10] = {}, *ptr = array;
+
+  unaligned_load<float>(ptr);
+  unaligned_load_inc<float>((const float*&)ptr);
+  unaligned_store_inc<float>(ptr, 1.0f);
+  unaligned_store<float>(ptr, 2.0f);
+
+  unaligned_lower_bound(array, 3, 1.0f);
+  unaligned_upper_bound(array, 3, 1.0f);
+}
+
 void url_detector_compilation() {
   url_detector::detect("http://ufal.mff.cuni.cz");
 }
