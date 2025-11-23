@@ -1,3 +1,7 @@
+Version 3.5.6-dev
+-----------------
+
+
 Version 3.5.5 [23 Nov 2025]
 ---------------------------
 - Fix compiler warnings in `parse_int` and `parse_double`.
